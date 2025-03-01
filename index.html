@@ -2,20 +2,33 @@
 <html>
 
 <head>
-    <base href="https://projects.dawn.org.in/wikilynx/">
+    <title>wikiLYNX</title>
+
+    <link rel="icon" href="/images/favicon.ico">
+
+    <!-- Set Base on Production -->
+    <script>
+        if (location.hostname !== "localhost" || location.hostname !== "127.0.0.1") {  // Only add base if not on localhost
+            let base = document.createElement("base");
+            base.href = "https://projects.dawn.org.in/wikilynx/";
+            document.head.appendChild(base);
+        }
+    </script>
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Fonts and Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+
+    <!-- Main Assets -->
     <script src=".cfg/scripts/navbar.js"></script>
+    <link href=".cfg/assets/main.css" rel="stylesheet">
+
+    <!-- DAWN CDN -->
     <script src="https://cdn.dawn.org.in/projects/wikilynx/cdn-loader.js"></script>
 
-
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
-    <link href=".cfg/assets/main.css" rel="stylesheet">
-    <link href="https://cdn.dawn.org.in/projects/wikilynv"> 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+    <!-- Material Theming-->
     <script type="importmap">
       {
         "imports": {
@@ -30,14 +43,14 @@
       document.adoptedStyleSheets.push(typescaleStyles.styleSheet);
     </script>
 
-    <title>wikiLYNX</title>
 </head>
 
 <body>
 
     <div class="top">
         <div class="topLogo">
-            <img src="https://cdn.dawn.org.in/projects/wikilynx/wikiLYNX_Logo.svg" width="90">
+            <div cdn-img="logo.svg" alt="Logo" width="90px"></div>
+            <!-- <img src="https://cdn.dawn.org.in/projects/wikilynx/wikiLYNX_Logo.svg" width="90"> -->
         </div>
         <div class="topTitle">
             wikiLYNX
