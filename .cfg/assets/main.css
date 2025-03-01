@@ -72,62 +72,6 @@
     display: none;
 }
 
-/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
-@media screen and (max-width: 600px) {
-
-    .topnav a {
-        display: none;
-    }
-
-    .topnav a:not(:first-child) {
-        display: none;
-    }
-
-    .topTitle {
-        font-size: 100%;
-    }
-
-    .topnav a.icon {
-        float: right;
-        display: flex;
-    }
-}
-
-/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
-@media screen and (max-width: 600px) {
-    .topnav.responsive {
-        float: right;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        position: absolute;
-        padding-top: 0px;
-        padding: 10px;
-        z-index: 1;
-        x: 1;
-        right: 10px;
-        width: fit-content;
-        overflow: hidden;
-        /*position: relative;*/
-    }
-
-    .topnav.responsive a.icon {
-        /*position: absolute;*/
-        background-color: red;
-    }
-
-    .topnav.responsive a {
-        font-size: 17px;
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        text-align: left;
-    }
-
-    .topnav.responsive a:hover {
-        font-size: 17px;
-    }
-}
 
 .background-image {
     position: fixed;
@@ -153,6 +97,7 @@
     margin: 20px;
     display: flex;
     border-radius: 20px;
+    flex-wrap: wrap;
 }
 
 .content1 {
@@ -190,4 +135,77 @@
     font-family: 'Comfortaa';
     font-weight: bolder;
     font-size: xx-large;
+}
+
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 600px) {
+
+    .topnav a {
+        display: none;
+    }
+
+    .topnav a:not(:first-child) {
+        display: none;
+    }
+
+    .topTitle {
+        font-size: 100%;
+    }
+
+    .topnav a.icon {
+        float: right;
+        display: flex;
+    }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 600px) {
+
+    .content0 {
+        flex-direction: column; /* Stack items on small screens */
+        text-align: center;
+    }
+
+    .left, .right {
+        width: 100%;
+    }
+
+    .desc {
+        max-width: 100%; /* Allow text to fill screen */
+    }
+
+    
+    .topnav.responsive {
+        float: right;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        position: absolute;
+        padding-top: 0px;
+        padding: 10px;
+        z-index: 1;
+        x: 1;
+        right: 10px;
+        width: fit-content;
+        overflow: hidden;
+        /*position: relative;*/
+    }
+
+    .topnav.responsive a.icon {
+        /*position: absolute;*/
+        background-color: red;
+    }
+
+    .topnav.responsive a {
+        font-size: 17px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        text-align: left;
+    }
+
+    .topnav.responsive a:hover {
+        font-size: 17px;
+    }
 }
