@@ -1,18 +1,21 @@
 :root {
-    background-color: #181818;
+    --text-color: #ffffff;
+    --background-color: #181818;
+    --primary-color: #ea3323;
+    background-color: var(--background-color);
     font-size: 14pt;
+    color: var(--text-color);
     font-family: 'Comfortaa';
 }
 
 .top {
-    display: flex; 
+    display: flex;
     height: 10%;
-    background-color: #333;
 }
 
 .topTitle {
     font-family: 'Courier Prime';
-    font-size:xx-large;
+    font-size: xx-large;
     color: #ffffff;
     display: flex;
     align-items: center;
@@ -36,26 +39,32 @@
 /* Style the links inside the navigation bar */
 .topnav a {
     height: 100%;
-    float: right;
+    float: left;
     display: flex;
+    vertical-align: middle;
     align-items: center;
     color: #f2f2f2;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    font-size: 17px;
+    font-size: 0px;
+}
+
+.topnav span {
+    float: right;
 }
 
 /* Change the color of links on hover */
 .topnav a:hover {
+    font-size: 17px;
     background-color: #ddd;
     color: black;
 }
 
 /* Add an active class to highlight the current page */
 .topnav a.active {
-    background-color: #04AA6D;
-    color: white;
+    background-color: var(--primary-color);
+    color: black;
 }
 
 /* Hide the link that should open and close the topnav on small screens */
@@ -65,31 +74,120 @@
 
 /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
 @media screen and (max-width: 600px) {
+
+    .topnav a {
+        display: none;
+    }
+
     .topnav a:not(:first-child) {
         display: none;
     }
 
+    .topTitle {
+        font-size: 100%;
+    }
+
     .topnav a.icon {
         float: right;
-        display: block;
+        display: flex;
     }
 }
 
 /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
 @media screen and (max-width: 600px) {
     .topnav.responsive {
-        position: relative;
+        float: right;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        position: absolute;
+        padding-top: 0px;
+        padding: 10px;
+        z-index: 1;
+        x: 1;
+        right: 10px;
+        width: fit-content;
+        overflow: hidden;
+        /*position: relative;*/
     }
 
     .topnav.responsive a.icon {
-        position: absolute;
-        right: 0;
-        top: 0;
+        /*position: absolute;*/
+        background-color: red;
     }
 
     .topnav.responsive a {
-        float: none;
-        display: block;
+        font-size: 17px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
         text-align: left;
     }
+
+    .topnav.responsive a:hover {
+        font-size: 17px;
+    }
+}
+
+.background-image {
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    display: block;
+    background-image: url('https://cdn.dawn.org.in/projects/wikilynx/screenshots/Banner_WelcomeDialog_Plasma.png');
+    height: 100%;
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(5px);
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+}
+
+.content0 {
+    margin: 20px;
+    display: flex;
+    border-radius: 20px;
+}
+
+.content1 {
+    margin: 20px;
+    display: flex;
+    border-radius: 20px;
+}
+
+.left {
+    flex: 0;
+}
+
+.right {
+    flex: 1;
+}
+
+.content0 span {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.title {
+    padding: 50px;
+    padding-bottom: 50px;
+    color: white;
+    font-family: 'Comfortaa';
+    font-weight: bolder;
+    font-size: xxx-large;
+}
+
+.desc {
+    padding: 50px;
+    padding-bottom: 50px;
+    color: white;
+    font-family: 'Comfortaa';
+    font-weight: bolder;
+    font-size: xx-large;
 }
