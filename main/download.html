@@ -7,6 +7,7 @@
     <link rel="icon" type="image/x-icon" href="https://cdn.dawn.org.in/projects/wikilynx/logo.svg">
 
     <!-- Set Base on Production -->
+    <base href="/main/">
     <script>
         if (location.hostname !== "localhost" || location.hostname !== "127.0.0.1") {  // Only add base if not on localhost
             let base = document.createElement("base");
@@ -14,7 +15,7 @@
             document.head.appendChild(base);
         }
     </script>
-    
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Fonts and Icons -->
@@ -37,10 +38,10 @@
       }
     </script>
     <script type="module">
-      import '@material/web/all.js';
-      import {styles as typescaleStyles} from '@material/web/typography/md-typescale-styles.js';
-  
-      document.adoptedStyleSheets.push(typescaleStyles.styleSheet);
+        import '@material/web/all.js';
+        import { styles as typescaleStyles } from '@material/web/typography/md-typescale-styles.js';
+
+        document.adoptedStyleSheets.push(typescaleStyles.styleSheet);
     </script>
 
 </head>
@@ -49,7 +50,7 @@
 
     <div class="top">
         <div class="topLogo">
-            <img src="https://cdn.dawn.org.in/projects/wikilynx/wikiLYNX_Logo.svg" width="90">
+            <div cdn-img="logo.svg" alt="Logo" width="90px"></div>
         </div>
         <div class="topTitle">
             wikiLYNX
@@ -63,11 +64,11 @@
                 <span class="navItem">Downloads</span>
                 <span class="material-symbols-outlined">download</span>
             </a>
-            <a href="#news">
-                <span class="navItem">News</span>
+            <a href="https://feeds.dawn.org.in/Projects/wikiLYNX/RSS.xml" target="_blank">
+                <span class="navItem">RSS Feed</span>
                 <span class="material-symbols-outlined">news</span>
             </a>
-            <a href="https://github.com/flamboyantpenguin/wikilynx">
+            <a href="https://github.com/flamboyantpenguin/wikilynx" target="_blank">
                 <span class="navItem">Contribute</span>
                 <span class="material-symbols-outlined">code</span>
             </a>
@@ -84,37 +85,301 @@
 
     <div class="content">
 
-        <div class="content0" style="background-color: #276299;";">
-            <div class="left">
-                <div cdn-img="screenshots/WelcomeDialog.png" alt="Logo" width="500px"></div>
-            </div>
+        <!-- Windows -->
+        <div class="content0" style="background-color: #0578D3;" ;">
             <div class="right">
-                <div class = "title">
+                <div class="title">
                     <span>Windows</span>
                 </div>
                 <div class="desc">
-                    <span>A simple app to play Wikipedia speedruns the right way!</span>
+                    <span>OS Version: Windows 10 and above</span><br>
+                    <span>Architecture: x86-64</span>
+
+                    <div style="margin-top: 50px;">
+
+                        <div class="tooltip-container" data-tooltip="SHA256: 5cab8f8b7540500f0ad72942f4fbbf6a7a3537189a076bd2d580bfedac6d46ba">
+                            <md-elevated-button class="med-button"
+                                href="https://archive.dawn.org.in/DAWN/Projects/wikiLYNX/downloads/latest/win/wikiLYNX_win_installer_amd64.exe">
+                                Online Installer
+                                <svg slot="icon" viewBox="0 -1000 1000 1000" width="32px" height="32px" fill="#000000">
+                                    <path
+                                        d="M480-320 280-520l56-58 104 104v-326h80v326l104-104 56 58-200 200ZM240-160q-33 0-56.5-23.5T160-240v-120h80v120h480v-120h80v120q0 33-23.5 56.5T720-160H240Z" />
+                                </svg>
+                            </md-elevated-button>
+                        </div>
+
+                        <div class="tooltip-container" data-tooltip="SHA256: 38fc6588991abfb50294606681598df069ef7c4c212e4243322c5376e44eba6b">
+                            <md-elevated-button class="med-button"
+                                href="https://archive.dawn.org.in/DAWN/Projects/wikiLYNX/downloads/latest/win/wikiLYNX_win_offline_installer_amd64.exe">
+                                Offline Installer
+                                <svg slot="icon" viewBox="0 -1000 1000 1000" width="32px" height="32px" fill="#000000">
+                                    <path
+                                        d="M480-320 280-520l56-58 104 104v-326h80v326l104-104 56 58-200 200ZM240-160q-33 0-56.5-23.5T160-240v-120h80v120h480v-120h80v120q0 33-23.5 56.5T720-160H240Z" />
+                                </svg>
+                            </md-elevated-button>
+                        </div>
+
+                    </div>
+
                 </div>
+
             </div>
         </div>
 
-        <div class="content0" style="background-color: #F9D15C;";">
-            <div class="left" style="padding: 20px;">
-                <div cdn-img="screenshots/Banner_WelcomeDialog_Plasma.png" alt="Logo" width="600px"></div>
-            </div>
+        <!-- FlatHub -->
+        <div class="content0" style="background-color: #76767B;" ;">
             <div class="right">
-                <div class = "title" style="color: #181818;">
-                    <span>Linux</span>
+
+                <div class="title" style="color: #181818;">
+                    <span>Linux | FlatHub</span>
+                </div>
+
+                <div class="desc">
+                    <div style="display: block; margin-bottom: 80px; color: #000000;">
+                        Get wikiLYNX on Flathub! Follow their instructions to setup Flathub on your system!
+                    </div>
+
+                    <a href='https://flathub.org/apps/in.org.dawn.wikilynx'>
+                        <img width='240' alt='Get it on Flathub' src='https://flathub.org/api/badge?locale=en' />
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- AppImage -->
+        <div class="content0" style="background-color: #769DB5;" ;">
+
+            <div class="right">
+                <div class="title" style="color: #181818;">
+                    <span>Linux | AppImage</span>
                 </div>
                 <div class="desc">
-                    <span></span><br>
-                    <a href='https://flathub.org/apps/in.org.dawn.wikilynx'>
-                        <img width='240' alt='Get it on Flathub' src='https://flathub.org/api/badge?locale=en'/>
-                      </a>
+
+                    <div style="display: block; margin-bottom: 80px; color: #000000;">
+                        Download for your respective system architecture and double click to run! No install no hassle nothing!
+                    </div>
+
+                    <div style="flex-direction: column; text-align: justify;">
+                        <div class="tooltip-container" data-tooltip="SHA256: ebfa683e1fa51166d1c2bcceb81743e0cf82cd94d2a545877623d54fdfd86628">
+                            <md-elevated-button class="med-button" href="https://archive.dawn.org.in/DAWN/Projects/wikiLYNX/downloads/latest/linux/wikiLYNX_1.5.6-3_amd64.AppImage">
+                                wikiLYNX_1.5.6-3_amd64.AppImage
+                                <svg slot="icon" viewBox="0 -1000 1000 1000" width="32px" height="32px" fill="#000000">
+                                    <path
+                                        d="M480-320 280-520l56-58 104 104v-326h80v326l104-104 56 58-200 200ZM240-160q-33 0-56.5-23.5T160-240v-120h80v120h480v-120h80v120q0 33-23.5 56.5T720-160H240Z" />
+                                </svg>
+                            </md-elevated-button>
+                        </div>
+
+                        <div class="tooltip-container" data-tooltip="SHA256: df3342149ee1108bec9a16f8b94c19635380700e3d86eafe08421bf6af2c8036">
+                            <md-elevated-button class="med-button" href="https://archive.dawn.org.in/DAWN/Projects/wikiLYNX/downloads/latest/linux/wikiLYNX_1.5.6-3_i386.AppImage">
+                                wikiLYNX_1.5.6-3_i386.AppImage
+                                <svg slot="icon" viewBox="0 -1000 1000 1000" width="32px" height="32px" fill="#000000">
+                                    <path
+                                        d="M480-320 280-520l56-58 104 104v-326h80v326l104-104 56 58-200 200ZM240-160q-33 0-56.5-23.5T160-240v-120h80v120h480v-120h80v120q0 33-23.5 56.5T720-160H240Z" />
+                                </svg>
+                            </md-elevated-button>
+                        </div>
+
+                        <div class="tooltip-container" data-tooltip="SHA256: e2560a9163b4c2c8f0a8f94fe067aa7e29ad359b13b05f4df5ab0db298270c96">
+                            <md-elevated-button class="med-button" href="https://archive.dawn.org.in/DAWN/Projects/wikiLYNX/downloads/latest/linux/wikiLYNX_1.5.6-3_arm64.AppImage">
+                                wikiLYNX_1.5.6-3_arm64.AppImage
+                                <svg slot="icon" viewBox="0 -1000 1000 1000" width="32px" height="32px" fill="#000000">
+                                    <path
+                                        d="M480-320 280-520l56-58 104 104v-326h80v326l104-104 56 58-200 200ZM240-160q-33 0-56.5-23.5T160-240v-120h80v120h480v-120h80v120q0 33-23.5 56.5T720-160H240Z" />
+                                </svg>
+                            </md-elevated-button>
+                        </div>
+
+                        <div class="tooltip-container" data-tooltip="SHA256: d33a10c7479cb94bd9517e8935ead1c721ab7d890379a982274648f874d1e7ab">
+                            <md-elevated-button class="med-button" href="https://archive.dawn.org.in/DAWN/Projects/wikiLYNX/downloads/latest/linux/wikiLYNX_1.5.6-3_armhf.AppImage">
+                                wikiLYNX_1.5.6-3_armhf.AppImage
+                                <svg slot="icon" viewBox="0 -1000 1000 1000" width="32px" height="32px" fill="#000000">
+                                    <path
+                                        d="M480-320 280-520l56-58 104 104v-326h80v326l104-104 56 58-200 200ZM240-160q-33 0-56.5-23.5T160-240v-120h80v120h480v-120h80v120q0 33-23.5 56.5T720-160H240Z" />
+                                </svg>
+                            </md-elevated-button>
+                        </div>
+
+                    </div>
+
                 </div>
             </div>
         </div>
 
+        <!-- Debian -->
+        <div class="content0" style="background-color: #A43B2E;" ;">
+            <div class="right">
+                <div class="title" style="color: #181818;">
+                    <span>Linux | Debian</span>
+                </div>
+                <div class="desc">
+
+                    <div style="display: block; margin-bottom: 80px; color: #000000;">
+                        Download for your respective system architecture. Open the file with a graphical package manager
+                        of your choice or run the command
+                        <pre>sudo apt install ./wikilynx_1.5.6-3_{arch}.deb # Replace arch with amd64/i386/arm64/armhf</pre>
+                        You can also install by enabling DAWN's Repository <br><br>
+                        Fedora 41
+                        <pre>
+sudo dnf config-manager addrepo --from-repofile=https://repo.dawn.org.in/rpm/dawn.repo
+sudo dnf install wikilynx</pre>
+                        Fedora 40
+                        <pre>
+sudo dnf config-manager --add-repo https://repo.dawn.org.in/rpm/dawn.repo
+sudo dnf install wikilynx</pre>
+                    </div>
+
+                    <div style="flex-direction: column; text-align: justify;">
+                        <div class="tooltip-container" data-tooltip="SHA256: 43d0cac004812a0f6f84ff688262e6d9a36292c5bdd74106f608c41aeddde011">
+                            <md-elevated-button class="med-button" href="https://archive.dawn.org.in/DAWN/Projects/wikiLYNX/downloads/latest/linux/wikilynx_1.5.6-3_amd64.deb">
+                                wikilynx_1.5.6-3_amd64.deb
+                                <svg slot="icon" viewBox="0 -1000 1000 1000" width="32px" height="32px" fill="#000000">
+                                    <path
+                                        d="M480-320 280-520l56-58 104 104v-326h80v326l104-104 56 58-200 200ZM240-160q-33 0-56.5-23.5T160-240v-120h80v120h480v-120h80v120q0 33-23.5 56.5T720-160H240Z" />
+                                </svg>
+                            </md-elevated-button>
+                        </div>
+
+                        <div class="tooltip-container" data-tooltip="SHA256: 63b1c1dcce121bd24db93f8663d8a1e7b9e816a62a6095f4eba3a5f18610f608">
+                            <md-elevated-button class="med-button" href="https://archive.dawn.org.in/DAWN/Projects/wikiLYNX/downloads/latest/linux/wikilynx_1.5.6-3_i386.deb">
+                                wikilynx_1.5.6-3_i386.deb
+                                <svg slot="icon" viewBox="0 -1000 1000 1000" width="32px" height="32px" fill="#000000">
+                                    <path
+                                        d="M480-320 280-520l56-58 104 104v-326h80v326l104-104 56 58-200 200ZM240-160q-33 0-56.5-23.5T160-240v-120h80v120h480v-120h80v120q0 33-23.5 56.5T720-160H240Z" />
+                                </svg>
+                            </md-elevated-button>
+                        </div>
+
+                        <div class="tooltip-container" data-tooltip="SHA256: 509187cd2bb1843e9bc7cea8691f4b486ad96124123154258555869c52dd760a">
+                            <md-elevated-button class="med-button" href="https://archive.dawn.org.in/DAWN/Projects/wikiLYNX/downloads/latest/linux/wikilynx_1.5.6-3_arm64.deb">
+                                wikilynx_1.5.6-3_arm64.deb
+                                <svg slot="icon" viewBox="0 -1000 1000 1000" width="32px" height="32px" fill="#000000">
+                                    <path
+                                        d="M480-320 280-520l56-58 104 104v-326h80v326l104-104 56 58-200 200ZM240-160q-33 0-56.5-23.5T160-240v-120h80v120h480v-120h80v120q0 33-23.5 56.5T720-160H240Z" />
+                                </svg>
+                            </md-elevated-button>
+                        </div>
+
+                        <div class="tooltip-container" data-tooltip="SHA256: 4b6524c48a6c7f258d8f1025e0696db8227cc0a961586ae740f9835f10700c08">
+                            <md-elevated-button class="med-button" href="https://archive.dawn.org.in/DAWN/Projects/wikiLYNX/downloads/latest/linux/wikilynx_1.5.6-3_armhf.deb">
+                                wikilynx_1.5.6-3_armhf.deb
+                                <svg slot="icon" viewBox="0 -1000 1000 1000" width="32px" height="32px" fill="#000000">
+                                    <path
+                                        d="M480-320 280-520l56-58 104 104v-326h80v326l104-104 56 58-200 200ZM240-160q-33 0-56.5-23.5T160-240v-120h80v120h480v-120h80v120q0 33-23.5 56.5T720-160H240Z" />
+                                </svg>
+                            </md-elevated-button>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Fedora-->
+        <div class="content0" style="background-color: #243F73;" ;">
+
+            <div class="right">
+
+                <div class="title" style="color: #ffffff;">
+                    <span>Linux | Fedora</span>
+                </div>
+
+                <div class="desc">
+
+                    <div style="display: block; margin-bottom: 80px;">
+                        Download for your respective system architecture. Open the file with a graphical package manager
+                        of your choice or run the command
+                        <pre>sudo dnf install ./wikilynx-1.5.6-3.fc{ver}.{arch}.rpm # Replace ver with 40/41. Replace arch with x86_64 or aarch64 </pre>
+                        You can also install by enabling DAWN's dnf Repository
+                        <br><br>
+                        Fedora 41
+                        <pre>
+sudo dnf config-manager --add-repo https://repo.dawn.org.in/rpm/dawn.repo
+sudo dnf install wikilynx</pre>
+                        Fedora 40
+                        <pre>
+sudo dnf config-manager addrepo --from-repofile=https://repo.dawn.org.in/rpm/dawn.repo
+sudo dnf install wikilynx</pre>
+                    </div>
+
+                    <div style="flex-direction: column; text-align: justify;">
+
+                        <div class="tooltip-container" data-tooltip="SHA256: e13f81ed9de91c4dc3bb0af8659a136e6b240f081730fcdbc0c31d1010d6ecca">
+                            <md-elevated-button class="med-button" href="https://archive.dawn.org.in/DAWN/Projects/wikiLYNX/downloads/latest/linux/wikilynx-1.5.6-3.fc41.x86_64.rpm">
+                                wikilynx-1.5.6-3.fc41.x86_64.rpm
+                                <svg slot="icon" viewBox="0 -1000 1000 1000" width="32px" height="32px" fill="#000000">
+                                    <path
+                                        d="M480-320 280-520l56-58 104 104v-326h80v326l104-104 56 58-200 200ZM240-160q-33 0-56.5-23.5T160-240v-120h80v120h480v-120h80v120q0 33-23.5 56.5T720-160H240Z" />
+                                </svg>
+                            </md-elevated-button>
+                        </div>
+
+                        <div class="tooltip-container" data-tooltip="SHA256: 9a0b5723a8dcbe9628e97cb0414ec1f917f68f5a2dfd24a0d09483dc585e59a5">
+                            <md-elevated-button class="med-button" href="https://archive.dawn.org.in/DAWN/Projects/wikiLYNX/downloads/latest/linux/wikilynx-1.5.6-3.fc41.aarch64.rpm">
+                                wikilynx-1.5.6-3.fc41.aarch64.rpm
+                                <svg slot="icon" viewBox="0 -1000 1000 1000" width="32px" height="32px" fill="#000000">
+                                    <path
+                                        d="M480-320 280-520l56-58 104 104v-326h80v326l104-104 56 58-200 200ZM240-160q-33 0-56.5-23.5T160-240v-120h80v120h480v-120h80v120q0 33-23.5 56.5T720-160H240Z" />
+                                </svg>
+                            </md-elevated-button>
+                        </div>
+
+                        <div class="tooltip-container" data-tooltip="SHA256: e83c02cdaa872f3131b58d003c4d68edb6ec00b6019e262725f1fe51465ed055">
+                            <md-elevated-button class="med-button" href="https://archive.dawn.org.in/DAWN/Projects/wikiLYNX/downloads/latest/linux/wikilynx-1.5.6-3.fc40.x86_64.rpm">
+                                wikilynx-1.5.6-3.fc40.x86_64.rpm
+                                <svg slot="icon" viewBox="0 -1000 1000 1000" width="32px" height="32px" fill="#000000">
+                                    <path
+                                        d="M480-320 280-520l56-58 104 104v-326h80v326l104-104 56 58-200 200ZM240-160q-33 0-56.5-23.5T160-240v-120h80v120h480v-120h80v120q0 33-23.5 56.5T720-160H240Z" />
+                                </svg>
+                            </md-elevated-button>
+                        </div>
+
+                        <div class="tooltip-container" data-tooltip="SHA256: 218b5aaf99e979930e158c8d696a2dd56b7a09de5f5f692dc869849badbb90c8">
+                            <md-elevated-button class="med-button" href="https://archive.dawn.org.in/DAWN/Projects/wikiLYNX/downloads/latest/linux/wikilynx-1.5.6-3.fc40.aarch64.rpm">
+                                wikilynx-1.5.6-3.fc40.aarch64.rpm
+                                <svg slot="icon" viewBox="0 -1000 1000 1000" width="32px" height="32px" fill="#000000">
+                                    <path
+                                        d="M480-320 280-520l56-58 104 104v-326h80v326l104-104 56 58-200 200ZM240-160q-33 0-56.5-23.5T160-240v-120h80v120h480v-120h80v120q0 33-23.5 56.5T720-160H240Z" />
+                                </svg>
+                            </md-elevated-button>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Arch -->
+        <div class="content0" style="background-color: #1793D1;" ;">
+
+            <div class="right">
+                <div class="title" style="color: #181818;">
+                    <span>Linux | Arch</span>
+                </div>
+
+                <div class="desc">
+                    wikiLYNX is availble on Arch User Repository (AUR)
+                    <div style="display: block; padding: auto; margin: 50px; border-color: #181818;">
+                        <code>
+                            yay -S wikilynx
+                        </code>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="about">
+        <p><b>Last Updated: 31-03-2025</b></p>
+        <br>
+        <a href="mailto:mail@flamboyantpenguin.in">mail@flamboyantpenguin.in</a><br><br> Powered by DAWN
     </div>
 
 </body>

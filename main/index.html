@@ -7,6 +7,7 @@
     <link rel="icon" type="image/x-icon" href="https://cdn.dawn.org.in/projects/wikilynx/logo.svg">
 
     <!-- Set Base on Production -->
+    <base href="/main/">
     <script>
         if (location.hostname !== "localhost" || location.hostname !== "127.0.0.1") {  // Only add base if not on localhost
             let base = document.createElement("base");
@@ -14,7 +15,7 @@
             document.head.appendChild(base);
         }
     </script>
-    
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Fonts and Icons -->
@@ -37,10 +38,10 @@
       }
     </script>
     <script type="module">
-      import '@material/web/all.js';
-      import {styles as typescaleStyles} from '@material/web/typography/md-typescale-styles.js';
-  
-      document.adoptedStyleSheets.push(typescaleStyles.styleSheet);
+        import '@material/web/all.js';
+        import { styles as typescaleStyles } from '@material/web/typography/md-typescale-styles.js';
+
+        document.adoptedStyleSheets.push(typescaleStyles.styleSheet);
     </script>
 
 </head>
@@ -50,13 +51,12 @@
     <div class="top">
         <div class="topLogo">
             <div cdn-img="logo.svg" alt="Logo" width="90px"></div>
-            <!-- <img src="https://cdn.dawn.org.in/projects/wikilynx/wikiLYNX_Logo.svg" width="90"> -->
         </div>
         <div class="topTitle">
             wikiLYNX
         </div>
         <div class="topnav" id="myTopnav">
-            <a href="/" class="active">
+            <a href="." class="active">
                 <span class="navItem">Home</span>
                 <span class="material-symbols-outlined">home</span>
             </a>
@@ -64,11 +64,11 @@
                 <span class="navItem">Downloads</span>
                 <span class="material-symbols-outlined">download</span>
             </a>
-            <a href="#news">
-                <span class="navItem">News</span>
+            <a href="https://feeds.dawn.org.in/Projects/wikiLYNX/RSS.xml" target="_blank">
+                <span class="navItem">RSS Feed</span>
                 <span class="material-symbols-outlined">news</span>
             </a>
-            <a href="https://github.com/flamboyantpenguin/wikilynx">
+            <a href="https://github.com/flamboyantpenguin/wikilynx" target="_blank">
                 <span class="navItem">Contribute</span>
                 <span class="material-symbols-outlined">code</span>
             </a>
@@ -87,21 +87,23 @@
 
         <div class="content0" style="background-color: #5C9B43;">
             <div class="left">
-                <div cdn-img="screenshots/WelcomeDialog.png" alt="Logo" width="500px"></div>
+                <div class="banner" cdn-img="screenshots/WelcomeDialog.png" alt="Logo" width="500px"></div>
             </div>
             <div class="right">
-                <div class = "title">
+                <div class="title">
                     <span>Say hello to wikiLYNX!</span>
                 </div>
                 <div class="desc">
-                    <span>A simple app to play Wikipedia speedruns the right way!</span>
+                    <span>A simple app to play Wikipedia speedruns the right way! <br><br>
+                        Navigate your way through hyperlinks and find the target article
+                        as soon as possible within the shortest possible path!</span>
                 </div>
             </div>
         </div>
         <br>
 
         <div class="content1" style="background-color: #276299;">
-            <div class="left">
+            <div class="right">
                 <div class="title">
                     <span>Create and Customize Levels!</span>
                 </div>
@@ -116,21 +118,63 @@
 
         <div class="content0" style="background-color: #E67D64;">
             <div class="left">
-                <div cdn-img="screenshots/WelcomeDialog.png" alt="Logo" width="500px"></div>
+                <div class="slideshow-container">
+
+                    <div class="mySlides fade banner">
+                        <div cdn-img="screenshots/Banner_WelcomeDialog_Plasma.png" alt="Logo" width="800px"></div>
+                    </div>
+
+                    <div class="mySlides fade banner">
+                        <div cdn-img="screenshots/Banner_WelcomeDialog_Windows.png" alt="Logo" width="500px"></div>
+                    </div>
+                </div>
+
+                <script>
+                    let slideIndex = 0;
+                    showSlides();
+
+                    function showSlides() {
+                        let i;
+                        let slides = document.getElementsByClassName("mySlides");
+                        for (i = 0; i < slides.length; i++) {
+                            slides[i].style.display = "none";
+                        }
+                        slideIndex++;
+                        if (slideIndex > slides.length) { slideIndex = 1 }
+                        slides[slideIndex - 1].style.display = "block";
+                        setTimeout(showSlides, 2000); // Change image every 2 seconds
+                    }
+                </script>
+
             </div>
             <div class="right">
                 <div class="title">
                     <span>Available on Windows and Linux!</span>
                 </div>
                 <div class="desc">
-                    <md-filled-tonal-button>
-                        Download Now!
-                        <svg slot="icon" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M480-320 280-520l56-58 104 104v-326h80v326l104-104 56 58-200 200ZM240-160q-33 0-56.5-23.5T160-240v-120h80v120h480v-120h80v120q0 33-23.5 56.5T720-160H240Z"/></svg>
-                    </md-filled-tonal-button>
+                    <div>
+                        wikiLYNX is available on Windows and in most platforms on Linux! Check the download page for
+                        more info!
+                    </div>
+                    <div style="margin-top: 50px;">
+                        <md-filled-tonal-button class="big-button" href="download.html">
+                            Download Now!
+                            <svg slot="icon" viewBox="0 -1000 1000 1000" width="32px" height="32px" fill="#000000">
+                                <path
+                                    d="M480-320 280-520l56-58 104 104v-326h80v326l104-104 56 58-200 200ZM240-160q-33 0-56.5-23.5T160-240v-120h80v120h480v-120h80v120q0 33-23.5 56.5T720-160H240Z" />
+                            </svg>
+                        </md-filled-tonal-button>
+                    </div>
                 </div>
             </div>
         </div>
 
+    </div>
+
+    <div class="about">
+        <p><b>Last Updated: 31-03-2025</b></p>
+        <br>
+        <a href="mailto:mail@flamboyantpenguin.in">mail@flamboyantpenguin.in</a><br><br> Powered by DAWN
     </div>
 
 </body>

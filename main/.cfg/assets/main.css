@@ -47,11 +47,11 @@
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    font-size: 0px;
+    font-size: 17px;
 }
 
-.topnav span {
-    float: right;
+.navItem span {
+    font-size: 17px;
 }
 
 /* Change the color of links on hover */
@@ -100,27 +100,29 @@
     flex-wrap: wrap;
 }
 
-.content1 {
-    margin: 20px;
-    display: flex;
-    border-radius: 20px;
-}
-
-.left {
-    flex: 0;
-}
-
-.right {
-    flex: 1;
-}
-
 .content0 span {
     padding-top: 10px;
     padding-bottom: 10px;
 }
 
+
+.left {
+    flex: 1;
+}
+
+.right {
+    flex: 2;
+    position: relative;
+}
+
+.left img {
+    margin: 20px;
+}
+
+
 .title {
     padding: 50px;
+    text-align: justify;
     padding-bottom: 50px;
     color: white;
     font-family: 'Comfortaa';
@@ -128,7 +130,16 @@
     font-size: xxx-large;
 }
 
+.content1 {
+    margin: 20px;
+    display: flex;
+    border-radius: 20px;
+}
+
+
+/* Desc */
 .desc {
+    text-align: justify;
     padding: 50px;
     padding-bottom: 50px;
     color: white;
@@ -137,9 +148,208 @@
     font-size: xx-large;
 }
 
+.long-desc {
+    text-align: justify;
+    padding: 50px;
+    padding-bottom: 50px;
+    color: white;
+    font-family: 'Noto Sans';
+    font-size: xx-large;
+}
+
+.desc a {
+    color: #f2f2f2;
+    font-size: xx-large;
+    text-decoration: none;
+}
+
+.big-button {
+    --md-sys-typescale-label-large: 1.5rem;
+    /* Bigger text */
+    font-size: x-large;
+    padding: 20px 40px;
+    /* More padding */
+    min-width: 200px;
+    /* Wider button */
+    min-height: 60px;
+    /* Taller button */
+}
+
+.big-button svg {
+    width: 32px;
+    height: 32px;
+}
+
+.med-button {
+    font-size: large;
+    min-width: 100px;
+    padding: 20px 20px;
+    min-height: 60px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.med-button svg {
+    width: 32px;
+    height: 32px;
+}
+
+pre {
+    background: #1e1e2e;
+    /* Dark background */
+    color: #cdd6f4;
+    /* Light text */
+    padding: 16px;
+    border-radius: 8px;
+    overflow-x: auto;
+    font-family: "Source Code Pro", monospace;
+    font-size: 14px;
+    line-height: 1.5;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.tooltip-container {
+    position: relative;
+    display: inline-block;
+}
+
+/* Tooltip text */
+.tooltip-container::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 120%;
+    /* Position above the button */
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 6px 10px;
+    font-size: 12px;
+    border-radius: 4px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+/* Show tooltip on hover */
+.tooltip-container:hover::after {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(-4px);
+}
+
+
+/* Footer (About) */
+.about {
+    color: #39ff14;
+    font-size: small;
+    background-color: #000;
+    padding: 2%;
+    height: fit-content;
+    width: 100%;
+    flex-direction: column;
+    bottom: 0;
+}
+
+.about a {
+	text-decoration: none;
+	color: #d5cfcf;
+}
+
+/* Slide Show */
+
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+    background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
 
 /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
+
+    .content0 {
+        flex-direction: column;
+        /* Stack items on small screens */
+        text-align: center;
+    }
+
+    .content1 {
+        flex-direction: column;
+        /* Stack items on small screens */
+        text-align: center;
+    }
 
     .topnav a {
         display: none;
@@ -157,25 +367,78 @@
         float: right;
         display: flex;
     }
-}
 
-/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
-@media screen and (max-width: 600px) {
-
-    .content0 {
-        flex-direction: column; /* Stack items on small screens */
-        text-align: center;
-    }
-
-    .left, .right {
-        width: 100%;
+    .title {
+        padding: 20px;
+        font-size: 100%;
     }
 
     .desc {
-        max-width: 100%; /* Allow text to fill screen */
+        padding: 20px;
+        font-size: 80%;
     }
 
+    .desc a {
+        color: #f2f2f2;
+        font-size: 80%;
+        text-decoration: none;
+    }
+
+    .long-desc {
+        font-size: 80%;
+    }
+
+    .banner {
+        max-width: 100%;
+        /* Ensures the image never overflows */
+        height: auto;
+        /* Maintains aspect ratio */
+        display: block;
+    }
+
+    .left {
+        flex: 1;
+        position: relative;
+    }
+
+    .right {
+        width: 100%;
+        flex: 1;
+        position: relative;
+    }
+
+    .left img {
+        max-width: 100%;
+        margin: 10px;
+        height: auto;
+    }
+
+    .right img {
+        max-width: 100%;
+    }
+
+    .tooltip-container {
+        display: flex;
+    }
+
+    .med-button {
+        font-size: 100%;
+        padding: 20px 20px;
+        min-width: 100%;
+        min-height: 60px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
     
+    .med-button svg {
+        width: 32px;
+        height: 32px;
+    }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 800px) {
+
     .topnav.responsive {
         float: right;
         display: flex;
@@ -194,6 +457,15 @@
 
     .topnav.responsive a.icon {
         /*position: absolute;*/
+        background-color: white;
+    }
+
+    .topnav.responsive a.active {
+        font-size: 17px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        text-align: left;
         background-color: red;
     }
 
@@ -203,6 +475,7 @@
         display: flex;
         justify-content: space-between;
         text-align: left;
+        background-color: #181818;
     }
 
     .topnav.responsive a:hover {
