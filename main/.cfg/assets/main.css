@@ -250,6 +250,7 @@ pre {
     width: 100%;
     flex-direction: column;
     bottom: 0;
+    border-radius: 20px;
 }
 
 .about a {
@@ -388,14 +389,6 @@ pre {
         font-size: 80%;
     }
 
-    .banner {
-        max-width: 100%;
-        /* Ensures the image never overflows */
-        height: auto;
-        /* Maintains aspect ratio */
-        display: block;
-    }
-
     .left {
         flex: 1;
         position: relative;
@@ -411,10 +404,23 @@ pre {
         max-width: 100%;
         margin: 10px;
         height: auto;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .right img {
         max-width: 100%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .banner {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .tooltip-container {
