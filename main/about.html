@@ -7,13 +7,15 @@
     <link rel="icon" href="https://cdn.dawn.org.in/projects/wikilynx/logo.svg">
 
     <!-- Set Base on Production -->
-    <base href="/main/">
     <script>
-        if (location.hostname !== "localhost" || location.hostname !== "127.0.0.1") {  // Only add base if not on localhost
-            let base = document.createElement("base");
-            base.href = "https://projects.dawn.org.in/wikilynx/";
-            document.head.appendChild(base);
-        }
+        (function () {
+            const isLocalhost = ["localhost", "127.0.0.1"].includes(window.location.hostname);
+            if (!isLocalhost) {
+                const base = document.getElementsByName("base");
+                base.href = "https://projects.dawn.org.in/wikilynx/";
+                document.head.appendChild(base);
+            }
+        })();
     </script>
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
