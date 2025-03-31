@@ -1,0 +1,135 @@
+body {
+    font-family: 'Comfortaa';
+    margin: 20px;
+    padding: 0;
+    background: var(--background-color);
+}
+
+h1 {
+    text-align: center;
+}
+
+.news-container {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    color: black;
+    border-color: var(--primary-color);
+    border-radius: 10px;
+}
+
+.news-item {
+    display: flex;
+    flex-direction: column;
+    color: black;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap;
+    margin: 20px;
+}
+
+.news-item:last-child {
+    border-bottom: none;
+}
+
+.news-item a.title {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-size: xx-large;
+    font-weight: bold;
+    text-align: left;
+}
+
+.news-item a.link {
+    margin-left: 50px;
+    margin-bottom: 50px;
+    text-decoration: none;
+    color: var(--primary-color);
+    font-size: large;
+    font-weight: bold;
+}
+
+.news-item p {
+    margin: 50px;
+    font-size: large;
+    color: black;
+    text-align: justify;
+}
+
+.news-item small {
+    margin-right: 50px;
+    margin-bottom: 10px;
+    display: block;
+    text-align: right;
+}
+
+.link-button {
+    font-family: 'Comfortaa';
+    font-size: large;
+    max-width: 15%;
+    padding: 2px 2px;
+    min-height: 60px;
+    margin-top: 20px;
+    margin-left: 50px;
+    margin-bottom: 20px;
+}
+
+.link-button svg {
+    width: 32px;
+    height: 32px;
+}
+
+
+@media screen and (max-width: 600px) {
+
+    .news-container {
+        padding: 0px;
+    }
+
+    .news-item {
+        max-width: 100%;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .news-item p {
+        font-size: 80%;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .news-item a.link {
+        margin-left: 20px;
+        margin-bottom: 50px;
+        text-decoration: none;
+        color: var(--primary-color);
+        font-size: 80%;
+        font-weight: bold;
+    }
+
+    .news-item small {
+        margin-right: 20px;
+        margin-bottom: 20px;
+        display: block;
+        text-align: right;
+        font-size: 50%;
+    }
+
+    .link-button {
+        font-family: 'Comfortaa';
+        font-size: 70%;
+        max-width: 50%;
+        padding: 0px 0px 0px 0px;
+        margin-top: 20px;
+        max-height: 20%;
+        margin-left: 20px;
+        margin-bottom: 20px;
+    }
+    
+    .link-button svg {
+        width: 32px;
+        height: 32px;
+    }
+}

@@ -20,14 +20,6 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Fonts and Icons -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
-
     <!-- Main Assets -->
     <script src=".cfg/scripts/navbar.js"></script>
     <link href=".cfg/assets/main.css" rel="stylesheet">
@@ -37,11 +29,11 @@
 
     <!-- Material Theming-->
     <script type="importmap">
-      {
+    {
         "imports": {
-          "@material/web/": "https://esm.run/@material/web/"
+        "@material/web/": "https://esm.run/@material/web/"
         }
-      }
+    }
     </script>
     <script type="module">
         import '@material/web/all.js';
@@ -70,8 +62,8 @@
                 <span class="navItem">Downloads</span>
                 <span class="material-symbols-outlined">download</span>
             </a>
-            <a href="https://feeds.dawn.org.in/Projects/wikiLYNX/RSS.xml" target="_blank">
-                <span class="navItem">RSS Feed</span>
+            <a href="news.html">
+                <span class="navItem">News</span>
                 <span class="material-symbols-outlined">news</span>
             </a>
             <a href="https://github.com/flamboyantpenguin/wikilynx" target="_blank">
@@ -143,7 +135,7 @@
                     <span>Dev | flamboyantpenguin</span>
                 </div>
 
-                <div class="desc">
+                <div class="long-desc">
                     <span>Hello I am ペンギン (flamboyantpenguin), a second year engineering student.
                         I’m a curious boi who loves to learn more about this world and life in it.
                         I am interesting in working on C/C++, Python and is looking forward to projects on Linux!</span>
@@ -159,7 +151,12 @@
     <div class="about">
         <p><b>Last Updated: 31-03-2025</b></p>
         <br>
-        <a href="mailto:mail@flamboyantpenguin.in">mail@flamboyantpenguin.in</a><br><br> Powered by DAWN
+        <a href="mailto:mail@flamboyantpenguin.in">mail@flamboyantpenguin.in</a><br><br>
+        <a href="https://github.com/flamboyantpenguin/wikilynx-web" style="display: block; text-align: right;">Source on
+            GitHub</a>
+        <div style="display: block; text-align: right; margin-top: 30px;">
+            <a href="https://dawn.org.in" style="color: #39ff14;">Powered by DAWN</a>
+        </div>
     </div>
 
 
