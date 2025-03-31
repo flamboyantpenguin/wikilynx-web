@@ -401,10 +401,10 @@ md-elevated-button {
     }
 
     .left img {
-        width: 80%;
         max-width: 100%;
         margin: 10px;
         height: auto;
+        display: block;
         margin-left: auto;
         margin-right: auto;
     }
