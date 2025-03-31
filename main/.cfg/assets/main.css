@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Noto+Color+Emoji&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
 :root {
     --text-color: #ffffff;
     --background-color: #181818;
@@ -74,18 +77,9 @@
 
 
 .background-image {
-    position: fixed;
-    left: 0;
-    right: 0;
-    z-index: 1;
-    display: block;
-    background-image: url('https://cdn.dawn.org.in/projects/wikilynx/screenshots/Banner_WelcomeDialog_Plasma.png');
-    height: 100%;
-    -webkit-filter: blur(5px);
-    -moz-filter: blur(5px);
-    -o-filter: blur(5px);
-    -ms-filter: blur(5px);
-    filter: blur(5px);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 .content {
@@ -105,8 +99,8 @@
     padding-bottom: 10px;
 }
 
-
 .left {
+    backdrop-filter: blur(15px);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -144,7 +138,7 @@
     color: white;
     font-family: 'Comfortaa';
     font-weight: bolder;
-    font-size: xx-large;
+    font-size: x-large;
 }
 
 .long-desc {
@@ -153,7 +147,7 @@
     padding-bottom: 50px;
     color: white;
     font-family: 'Noto Sans';
-    font-size: xx-large;
+    font-size: x-large;
 }
 
 .desc a {
@@ -326,6 +320,18 @@ pre {
     animation-duration: 1.5s;
 }
 
+.banner {
+    margin: 20px;
+}
+
+md-filled-tonal-button {
+    font-family: 'Comfortaa';
+}
+
+md-elevated-button {
+    font-family: 'Comfortaa';
+}
+
 @keyframes fade {
     from {
         opacity: .4
@@ -337,7 +343,7 @@ pre {
 }
 
 /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 600px) {
 
     .content0 {
         flex-direction: column;
@@ -374,8 +380,8 @@ pre {
     }
 
     .desc {
-        padding: 20px;
         font-size: 80%;
+        padding: 20px;
     }
 
     .desc a {
@@ -386,6 +392,7 @@ pre {
 
     .long-desc {
         font-size: 80%;
+        padding: 20px;
     }
 
     .left {
@@ -419,8 +426,6 @@ pre {
         max-width: 100%;
         height: auto;
         display: block;
-        margin-left: auto;
-        margin-right: auto;
     }
 
     .tooltip-container {
@@ -443,7 +448,7 @@ pre {
 }
 
 /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 600px) {
 
     .topnav.responsive {
         float: right;

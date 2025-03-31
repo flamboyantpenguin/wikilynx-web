@@ -20,14 +20,6 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Fonts and Icons -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
-
     <!-- Main Assets -->
     <script src=".cfg/scripts/navbar.js"></script>
     <link href=".cfg/assets/main.css" rel="stylesheet">
@@ -70,8 +62,8 @@
                 <span class="navItem">Downloads</span>
                 <span class="material-symbols-outlined">download</span>
             </a>
-            <a href="https://feeds.dawn.org.in/Projects/wikiLYNX/RSS.xml" target="_blank">
-                <span class="navItem">RSS Feed</span>
+            <a href="news.html">
+                <span class="navItem">News</span>
                 <span class="material-symbols-outlined">news</span>
             </a>
             <a href="https://github.com/flamboyantpenguin/wikilynx" target="_blank">
@@ -92,7 +84,7 @@
     <div class="content">
 
         <!-- Windows -->
-        <div class="content0" style="background-color: #0578D3;" ;">
+        <div class="content0" style="background-color: #0578D3;">
             <div class="right">
                 <div class="title">
                     <span>Windows</span>
@@ -136,6 +128,7 @@
 
         <!-- FlatHub -->
         <div class="content0" style="background-color: #76767B;" ;">
+
             <div class="right">
 
                 <div class="title" style="color: #181818;">
@@ -153,15 +146,18 @@
                 </div>
 
             </div>
+
         </div>
 
         <!-- AppImage -->
         <div class="content0" style="background-color: #769DB5;" ;">
 
             <div class="right">
+
                 <div class="title" style="color: #181818;">
                     <span>Linux | AppImage</span>
                 </div>
+
                 <div class="desc">
 
                     <div style="display: block; margin-bottom: 80px; color: #000000;">
@@ -170,6 +166,7 @@
                     </div>
 
                     <div style="flex-direction: column; text-align: justify;">
+
                         <div class="tooltip-container"
                             data-tooltip="SHA256: ebfa683e1fa51166d1c2bcceb81743e0cf82cd94d2a545877623d54fdfd86628">
                             <md-elevated-button class="med-button"
@@ -217,168 +214,171 @@
                                 </svg>
                             </md-elevated-button>
                         </div>
-
                     </div>
 
                 </div>
+
             </div>
         </div>
+    </div>
 
-        <!-- Debian -->
-        <div class="content0" style="background-color: #A43B2E;" ;">
-            <div class="right">
-                <div class="title" style="color: #181818;">
-                    <span>Linux | Debian</span>
-                </div>
-                <div class="desc">
+    <!-- Debian -->
+    <div class="content0" style="background-color: #A43B2E;" ;">
 
-                    <div style="display: block; margin-bottom: 80px; color: #000000;">
-                        Download for your respective system architecture. Open the file with a graphical package manager
-                        of your choice or run the command
-                        <pre>sudo apt install ./wikilynx_1.5.6-3_{arch}.deb # Replace arch with amd64/i386/arm64/armhf</pre>
-                        You can also install by enabling DAWN's Repository <br><br>
-                        Fedora 41
-                        <pre>
+        <div class="right">
+            
+            <div class="title" style="color: #181818;">
+                <span>Linux | Debian</span>
+            </div>
+
+            <div class="desc">
+
+                <div style="display: block; margin-bottom: 80px; color: #000000;">
+                    Download for your respective system architecture. Open the file with a graphical package manager
+                    of your choice or run the command
+                    <pre>sudo apt install ./wikilynx_1.5.6-3_{arch}.deb # Replace arch with amd64/i386/arm64/armhf</pre>
+                    You can also install by enabling DAWN's Repository <br><br>
+                    Fedora 41
+                    <pre>
 sudo dnf config-manager addrepo --from-repofile=https://repo.dawn.org.in/rpm/dawn.repo
 sudo dnf install wikilynx</pre>
-                        Fedora 40
-                        <pre>
+                    Fedora 40
+                    <pre>
 sudo dnf config-manager --add-repo https://repo.dawn.org.in/rpm/dawn.repo
 sudo dnf install wikilynx</pre>
+                </div>
+
+                <div style="flex-direction: column; text-align: justify;">
+
+                    <div class="tooltip-container"
+                        data-tooltip="SHA256: 43d0cac004812a0f6f84ff688262e6d9a36292c5bdd74106f608c41aeddde011">
+                        <md-elevated-button class="med-button"
+                            href="https://archive.dawn.org.in/DAWN/Projects/wikiLYNX/downloads/latest/linux/wikilynx_1.5.6-3_amd64.deb">
+                            wikilynx_1.5.6-3_amd64.deb
+                            <svg slot="icon" viewBox="0 -1000 1000 1000" width="32px" height="32px" fill="#000000">
+                                <path
+                                    d="M480-320 280-520l56-58 104 104v-326h80v326l104-104 56 58-200 200ZM240-160q-33 0-56.5-23.5T160-240v-120h80v120h480v-120h80v120q0 33-23.5 56.5T720-160H240Z" />
+                            </svg>
+                        </md-elevated-button>
                     </div>
 
-                    <div style="flex-direction: column; text-align: justify;">
-                        <div class="tooltip-container"
-                            data-tooltip="SHA256: 43d0cac004812a0f6f84ff688262e6d9a36292c5bdd74106f608c41aeddde011">
-                            <md-elevated-button class="med-button"
-                                href="https://archive.dawn.org.in/DAWN/Projects/wikiLYNX/downloads/latest/linux/wikilynx_1.5.6-3_amd64.deb">
-                                wikilynx_1.5.6-3_amd64.deb
-                                <svg slot="icon" viewBox="0 -1000 1000 1000" width="32px" height="32px" fill="#000000">
-                                    <path
-                                        d="M480-320 280-520l56-58 104 104v-326h80v326l104-104 56 58-200 200ZM240-160q-33 0-56.5-23.5T160-240v-120h80v120h480v-120h80v120q0 33-23.5 56.5T720-160H240Z" />
-                                </svg>
-                            </md-elevated-button>
-                        </div>
+                    <div class="tooltip-container"
+                        data-tooltip="SHA256: 63b1c1dcce121bd24db93f8663d8a1e7b9e816a62a6095f4eba3a5f18610f608">
+                        <md-elevated-button class="med-button"
+                            href="https://archive.dawn.org.in/DAWN/Projects/wikiLYNX/downloads/latest/linux/wikilynx_1.5.6-3_i386.deb">
+                            wikilynx_1.5.6-3_i386.deb
+                            <svg slot="icon" viewBox="0 -1000 1000 1000" width="32px" height="32px" fill="#000000">
+                                <path
+                                    d="M480-320 280-520l56-58 104 104v-326h80v326l104-104 56 58-200 200ZM240-160q-33 0-56.5-23.5T160-240v-120h80v120h480v-120h80v120q0 33-23.5 56.5T720-160H240Z" />
+                            </svg>
+                        </md-elevated-button>
+                    </div>
 
-                        <div class="tooltip-container"
-                            data-tooltip="SHA256: 63b1c1dcce121bd24db93f8663d8a1e7b9e816a62a6095f4eba3a5f18610f608">
-                            <md-elevated-button class="med-button"
-                                href="https://archive.dawn.org.in/DAWN/Projects/wikiLYNX/downloads/latest/linux/wikilynx_1.5.6-3_i386.deb">
-                                wikilynx_1.5.6-3_i386.deb
-                                <svg slot="icon" viewBox="0 -1000 1000 1000" width="32px" height="32px" fill="#000000">
-                                    <path
-                                        d="M480-320 280-520l56-58 104 104v-326h80v326l104-104 56 58-200 200ZM240-160q-33 0-56.5-23.5T160-240v-120h80v120h480v-120h80v120q0 33-23.5 56.5T720-160H240Z" />
-                                </svg>
-                            </md-elevated-button>
-                        </div>
+                    <div class="tooltip-container"
+                        data-tooltip="SHA256: 509187cd2bb1843e9bc7cea8691f4b486ad96124123154258555869c52dd760a">
+                        <md-elevated-button class="med-button"
+                            href="https://archive.dawn.org.in/DAWN/Projects/wikiLYNX/downloads/latest/linux/wikilynx_1.5.6-3_arm64.deb">
+                            wikilynx_1.5.6-3_arm64.deb
+                            <svg slot="icon" viewBox="0 -1000 1000 1000" width="32px" height="32px" fill="#000000">
+                                <path
+                                    d="M480-320 280-520l56-58 104 104v-326h80v326l104-104 56 58-200 200ZM240-160q-33 0-56.5-23.5T160-240v-120h80v120h480v-120h80v120q0 33-23.5 56.5T720-160H240Z" />
+                            </svg>
+                        </md-elevated-button>
+                    </div>
 
-                        <div class="tooltip-container"
-                            data-tooltip="SHA256: 509187cd2bb1843e9bc7cea8691f4b486ad96124123154258555869c52dd760a">
-                            <md-elevated-button class="med-button"
-                                href="https://archive.dawn.org.in/DAWN/Projects/wikiLYNX/downloads/latest/linux/wikilynx_1.5.6-3_arm64.deb">
-                                wikilynx_1.5.6-3_arm64.deb
-                                <svg slot="icon" viewBox="0 -1000 1000 1000" width="32px" height="32px" fill="#000000">
-                                    <path
-                                        d="M480-320 280-520l56-58 104 104v-326h80v326l104-104 56 58-200 200ZM240-160q-33 0-56.5-23.5T160-240v-120h80v120h480v-120h80v120q0 33-23.5 56.5T720-160H240Z" />
-                                </svg>
-                            </md-elevated-button>
-                        </div>
-
-                        <div class="tooltip-container"
-                            data-tooltip="SHA256: 4b6524c48a6c7f258d8f1025e0696db8227cc0a961586ae740f9835f10700c08">
-                            <md-elevated-button class="med-button"
-                                href="https://archive.dawn.org.in/DAWN/Projects/wikiLYNX/downloads/latest/linux/wikilynx_1.5.6-3_armhf.deb">
-                                wikilynx_1.5.6-3_armhf.deb
-                                <svg slot="icon" viewBox="0 -1000 1000 1000" width="32px" height="32px" fill="#000000">
-                                    <path
-                                        d="M480-320 280-520l56-58 104 104v-326h80v326l104-104 56 58-200 200ZM240-160q-33 0-56.5-23.5T160-240v-120h80v120h480v-120h80v120q0 33-23.5 56.5T720-160H240Z" />
-                                </svg>
-                            </md-elevated-button>
-                        </div>
-
+                    <div class="tooltip-container"
+                        data-tooltip="SHA256: 4b6524c48a6c7f258d8f1025e0696db8227cc0a961586ae740f9835f10700c08">
+                        <md-elevated-button class="med-button"
+                            href="https://archive.dawn.org.in/DAWN/Projects/wikiLYNX/downloads/latest/linux/wikilynx_1.5.6-3_armhf.deb">
+                            wikilynx_1.5.6-3_armhf.deb
+                            <svg slot="icon" viewBox="0 -1000 1000 1000" width="32px" height="32px" fill="#000000">
+                                <path
+                                    d="M480-320 280-520l56-58 104 104v-326h80v326l104-104 56 58-200 200ZM240-160q-33 0-56.5-23.5T160-240v-120h80v120h480v-120h80v120q0 33-23.5 56.5T720-160H240Z" />
+                            </svg>
+                        </md-elevated-button>
                     </div>
 
                 </div>
+
             </div>
         </div>
+    </div>
 
-        <!-- Fedora-->
-        <div class="content0" style="background-color: #243F73;" ;">
+    <!-- Fedora-->
+    <div class="content0" style="background-color: #243F73;" ;">
 
-            <div class="right">
+        <div class="right">
 
-                <div class="title" style="color: #ffffff;">
-                    <span>Linux | Fedora</span>
-                </div>
+            <div class="title" style="color: #ffffff;">
+                <span>Linux | Fedora</span>
+            </div>
 
-                <div class="desc">
+            <div class="desc">
 
-                    <div style="display: block; margin-bottom: 80px;">
-                        Download for your respective system architecture. Open the file with a graphical package manager
-                        of your choice or run the command
-                        <pre>sudo dnf install ./wikilynx-1.5.6-3.fc{ver}.{arch}.rpm # Replace ver with 40/41. Replace arch with x86_64 or aarch64 </pre>
-                        You can also install by enabling DAWN's dnf Repository
-                        <br><br>
-                        Fedora 41
-                        <pre>
+                <div style="display: block; margin-bottom: 80px;">
+                    Download for your respective system architecture. Open the file with a graphical package manager
+                    of your choice or run the command
+                    <pre>sudo dnf install ./wikilynx-1.5.6-3.fc{ver}.{arch}.rpm # Replace ver with 40/41. Replace arch with x86_64 or aarch64 </pre>
+                    You can also install by enabling DAWN's dnf Repository
+                    <br><br>
+                    Fedora 41
+                    <pre>
 sudo dnf config-manager --add-repo https://repo.dawn.org.in/rpm/dawn.repo
 sudo dnf install wikilynx</pre>
-                        Fedora 40
-                        <pre>
+                    Fedora 40
+                    <pre>
 sudo dnf config-manager addrepo --from-repofile=https://repo.dawn.org.in/rpm/dawn.repo
 sudo dnf install wikilynx</pre>
+                </div>
+
+                <div style="flex-direction: column; text-align: justify;">
+
+                    <div class="tooltip-container"
+                        data-tooltip="SHA256: e13f81ed9de91c4dc3bb0af8659a136e6b240f081730fcdbc0c31d1010d6ecca">
+                        <md-elevated-button class="med-button"
+                            href="https://archive.dawn.org.in/DAWN/Projects/wikiLYNX/downloads/latest/linux/wikilynx-1.5.6-3.fc41.x86_64.rpm">
+                            wikilynx-1.5.6-3.fc41.x86_64.rpm
+                            <svg slot="icon" viewBox="0 -1000 1000 1000" width="32px" height="32px" fill="#000000">
+                                <path
+                                    d="M480-320 280-520l56-58 104 104v-326h80v326l104-104 56 58-200 200ZM240-160q-33 0-56.5-23.5T160-240v-120h80v120h480v-120h80v120q0 33-23.5 56.5T720-160H240Z" />
+                            </svg>
+                        </md-elevated-button>
                     </div>
 
-                    <div style="flex-direction: column; text-align: justify;">
+                    <div class="tooltip-container"
+                        data-tooltip="SHA256: 9a0b5723a8dcbe9628e97cb0414ec1f917f68f5a2dfd24a0d09483dc585e59a5">
+                        <md-elevated-button class="med-button"
+                            href="https://archive.dawn.org.in/DAWN/Projects/wikiLYNX/downloads/latest/linux/wikilynx-1.5.6-3.fc41.aarch64.rpm">
+                            wikilynx-1.5.6-3.fc41.aarch64.rpm
+                            <svg slot="icon" viewBox="0 -1000 1000 1000" width="32px" height="32px" fill="#000000">
+                                <path
+                                    d="M480-320 280-520l56-58 104 104v-326h80v326l104-104 56 58-200 200ZM240-160q-33 0-56.5-23.5T160-240v-120h80v120h480v-120h80v120q0 33-23.5 56.5T720-160H240Z" />
+                            </svg>
+                        </md-elevated-button>
+                    </div>
 
-                        <div class="tooltip-container"
-                            data-tooltip="SHA256: e13f81ed9de91c4dc3bb0af8659a136e6b240f081730fcdbc0c31d1010d6ecca">
-                            <md-elevated-button class="med-button"
-                                href="https://archive.dawn.org.in/DAWN/Projects/wikiLYNX/downloads/latest/linux/wikilynx-1.5.6-3.fc41.x86_64.rpm">
-                                wikilynx-1.5.6-3.fc41.x86_64.rpm
-                                <svg slot="icon" viewBox="0 -1000 1000 1000" width="32px" height="32px" fill="#000000">
-                                    <path
-                                        d="M480-320 280-520l56-58 104 104v-326h80v326l104-104 56 58-200 200ZM240-160q-33 0-56.5-23.5T160-240v-120h80v120h480v-120h80v120q0 33-23.5 56.5T720-160H240Z" />
-                                </svg>
-                            </md-elevated-button>
-                        </div>
+                    <div class="tooltip-container"
+                        data-tooltip="SHA256: e83c02cdaa872f3131b58d003c4d68edb6ec00b6019e262725f1fe51465ed055">
+                        <md-elevated-button class="med-button"
+                            href="https://archive.dawn.org.in/DAWN/Projects/wikiLYNX/downloads/latest/linux/wikilynx-1.5.6-3.fc40.x86_64.rpm">
+                            wikilynx-1.5.6-3.fc40.x86_64.rpm
+                            <svg slot="icon" viewBox="0 -1000 1000 1000" width="32px" height="32px" fill="#000000">
+                                <path
+                                    d="M480-320 280-520l56-58 104 104v-326h80v326l104-104 56 58-200 200ZM240-160q-33 0-56.5-23.5T160-240v-120h80v120h480v-120h80v120q0 33-23.5 56.5T720-160H240Z" />
+                            </svg>
+                        </md-elevated-button>
+                    </div>
 
-                        <div class="tooltip-container"
-                            data-tooltip="SHA256: 9a0b5723a8dcbe9628e97cb0414ec1f917f68f5a2dfd24a0d09483dc585e59a5">
-                            <md-elevated-button class="med-button"
-                                href="https://archive.dawn.org.in/DAWN/Projects/wikiLYNX/downloads/latest/linux/wikilynx-1.5.6-3.fc41.aarch64.rpm">
-                                wikilynx-1.5.6-3.fc41.aarch64.rpm
-                                <svg slot="icon" viewBox="0 -1000 1000 1000" width="32px" height="32px" fill="#000000">
-                                    <path
-                                        d="M480-320 280-520l56-58 104 104v-326h80v326l104-104 56 58-200 200ZM240-160q-33 0-56.5-23.5T160-240v-120h80v120h480v-120h80v120q0 33-23.5 56.5T720-160H240Z" />
-                                </svg>
-                            </md-elevated-button>
-                        </div>
-
-                        <div class="tooltip-container"
-                            data-tooltip="SHA256: e83c02cdaa872f3131b58d003c4d68edb6ec00b6019e262725f1fe51465ed055">
-                            <md-elevated-button class="med-button"
-                                href="https://archive.dawn.org.in/DAWN/Projects/wikiLYNX/downloads/latest/linux/wikilynx-1.5.6-3.fc40.x86_64.rpm">
-                                wikilynx-1.5.6-3.fc40.x86_64.rpm
-                                <svg slot="icon" viewBox="0 -1000 1000 1000" width="32px" height="32px" fill="#000000">
-                                    <path
-                                        d="M480-320 280-520l56-58 104 104v-326h80v326l104-104 56 58-200 200ZM240-160q-33 0-56.5-23.5T160-240v-120h80v120h480v-120h80v120q0 33-23.5 56.5T720-160H240Z" />
-                                </svg>
-                            </md-elevated-button>
-                        </div>
-
-                        <div class="tooltip-container"
-                            data-tooltip="SHA256: 218b5aaf99e979930e158c8d696a2dd56b7a09de5f5f692dc869849badbb90c8">
-                            <md-elevated-button class="med-button"
-                                href="https://archive.dawn.org.in/DAWN/Projects/wikiLYNX/downloads/latest/linux/wikilynx-1.5.6-3.fc40.aarch64.rpm">
-                                wikilynx-1.5.6-3.fc40.aarch64.rpm
-                                <svg slot="icon" viewBox="0 -1000 1000 1000" width="32px" height="32px" fill="#000000">
-                                    <path
-                                        d="M480-320 280-520l56-58 104 104v-326h80v326l104-104 56 58-200 200ZM240-160q-33 0-56.5-23.5T160-240v-120h80v120h480v-120h80v120q0 33-23.5 56.5T720-160H240Z" />
-                                </svg>
-                            </md-elevated-button>
-                        </div>
-
+                    <div class="tooltip-container"
+                        data-tooltip="SHA256: 218b5aaf99e979930e158c8d696a2dd56b7a09de5f5f692dc869849badbb90c8">
+                        <md-elevated-button class="med-button"
+                            href="https://archive.dawn.org.in/DAWN/Projects/wikiLYNX/downloads/latest/linux/wikilynx-1.5.6-3.fc40.aarch64.rpm">
+                            wikilynx-1.5.6-3.fc40.aarch64.rpm
+                            <svg slot="icon" viewBox="0 -1000 1000 1000" width="32px" height="32px" fill="#000000">
+                                <path
+                                    d="M480-320 280-520l56-58 104 104v-326h80v326l104-104 56 58-200 200ZM240-160q-33 0-56.5-23.5T160-240v-120h80v120h480v-120h80v120q0 33-23.5 56.5T720-160H240Z" />
+                            </svg>
+                        </md-elevated-button>
                     </div>
 
                 </div>
@@ -387,32 +387,37 @@ sudo dnf install wikilynx</pre>
 
         </div>
 
-        <!-- Arch -->
-        <div class="content0" style="background-color: #1793D1;" ;">
+    </div>
 
-            <div class="right">
-                <div class="title" style="color: #181818;">
-                    <span>Linux | Arch</span>
-                </div>
+    <!-- Arch -->
+    <div class="content0" style="background-color: #1793D1;" ;">
 
-                <div class="desc">
-                    wikiLYNX is availble on Arch User Repository (AUR)
-                    <div style="display: block; padding: auto; margin: 50px; border-color: #181818;">
-                        <code>
-                            yay -S wikilynx
-                        </code>
-                    </div>
-                </div>
-
+        <div class="right">
+            <div class="title" style="color: #181818;">
+                <span>Linux | Arch</span>
             </div>
+
+            <div class="desc">
+                wikiLYNX is availble on Arch User Repository (AUR)
+                <div style="margin-top: 50px;">
+                    <pre>yay -S wikilynx</pre>
+                </div>
+            </div>
+
         </div>
+    </div>
 
     </div>
 
     <div class="about">
         <p><b>Last Updated: 31-03-2025</b></p>
         <br>
-        <a href="mailto:mail@flamboyantpenguin.in">mail@flamboyantpenguin.in</a><br><br> Powered by DAWN
+        <a href="mailto:mail@flamboyantpenguin.in">mail@flamboyantpenguin.in</a><br><br>
+        <a href="https://github.com/flamboyantpenguin/wikilynx-web" style="display: block; text-align: right;">Source on
+            GitHub</a>
+        <div style="display: block; text-align: right; margin-top: 30px;">
+            <a href="https://dawn.org.in" style="color: #39ff14;">Powered by DAWN</a>
+        </div>
     </div>
 
 </body>

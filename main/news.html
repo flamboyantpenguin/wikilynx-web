@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>wikiLYNX News</title>
+
+
+    <link rel="icon" type="image/x-icon" href="https://cdn.dawn.org.in/projects/wikilynx/logo.svg">
+
+    <!-- Set Base on Production -->
+    <script>
+        (function () {
+            const isLocalhost = ["localhost", "127.0.0.1"].includes(window.location.hostname);
+            if (!isLocalhost) {
+                const base = document.getElementsByName("base");
+                base.href = "https://projects.dawn.org.in/wikilynx/";
+                document.head.appendChild(base);
+            }
+        })();
+    </script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Main Assets -->
+    <script src=".cfg/scripts/navbar.js"></script>
+    <link href=".cfg/assets/main.css" rel="stylesheet">
+    <link href=".cfg/assets/news.css" rel="stylesheet">
+
+    <!-- DAWN CDN -->
+    <script src="https://cdn.dawn.org.in/projects/wikilynx/cdn-loader.js"></script>
+
+    <!-- Material Theming-->
+    <script type="importmap">
+      {
+        "imports": {
+          "@material/web/": "https://esm.run/@material/web/"
+        }
+      }
+    </script>
+    <script type="module">
+        import '@material/web/all.js';
+        import { styles as typescaleStyles } from '@material/web/typography/md-typescale-styles.js';
+
+        document.adoptedStyleSheets.push(typescaleStyles.styleSheet);
+    </script>
+
+</head>
+
+<body>
+
+    <div class="top">
+        <div class="topLogo">
+            <div cdn-img="logo.svg" alt="Logo" width="90px"></div>
+        </div>
+        <div class="topTitle">
+            wikiLYNX
+        </div>
+        <div class="topnav" id="myTopnav">
+            <a href=".">
+                <span class="navItem">Home</span>
+                <span class="material-symbols-outlined">home</span>
+            </a>
+            <a href="download.html">
+                <span class="navItem">Downloads</span>
+                <span class="material-symbols-outlined">download</span>
+            </a>
+            <a href="news.html" class="active">
+                <span class="navItem">News</span>
+                <span class="material-symbols-outlined">news</span>
+            </a>
+            <a href="https://github.com/flamboyantpenguin/wikilynx" target="_blank">
+                <span class="navItem">Contribute</span>
+                <span class="material-symbols-outlined">code</span>
+            </a>
+            <a href="about.html">
+                <span class="navItem">About</span>
+                <span class="material-symbols-outlined">info</span>
+            </a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()" id="menu">
+                <span class="navItem">Menu</span>
+                <span id="menulogo" class="material-symbols-outlined">menu</span>
+            </a>
+        </div>
+    </div>
+    <div class="news-container" id="news"></div>
+
+    <script>
+        async function loadRSS() {
+            const response = await fetch("https://feeds.dawn.org.in/Projects/wikiLYNX/RSS.xml");
+            const text = await response.text();
+            const parser = new DOMParser();
+            const xml = parser.parseFromString(text, "text/xml");
+            const items = xml.querySelectorAll("item");
+
+            let newsHTML = "";
+            items.forEach(item => {
+                const title = item.querySelector("title").textContent;
+                const link = item.querySelector("link").textContent;
+                const description = item.querySelector("description").textContent;
+                const pubDate = item.querySelector("pubDate").textContent;
+
+                newsHTML += `
+                    <div class="news-item">
+                        <a href="${link}" class="title" target="_blank">${title}</a>
+                        <p>${description}</p>
+                        <md-elevated-button href="${link}" class="link-button">
+                                Learn More
+                                <svg slot="icon" viewBox="0 -1000 1000 1000" width="32px" height="32px" fill="#000000">
+                                    <path
+                                        d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z" />
+                                </svg>
+                        </md-elevated-button>
+                        <small>${pubDate}</small>
+                    </div>
+                `;
+            });
+
+            document.getElementById("news").innerHTML = newsHTML;
+        }
+
+        loadRSS().catch(error => console.error("Failed to load RSS feed:", error));
+    </script>
+
+    <div class="about">
+        <p><b>Last Updated: 31-03-2025</b></p>
+        <br>
+        <a href="mailto:mail@flamboyantpenguin.in">mail@flamboyantpenguin.in</a><br><br>
+        <a href="https://github.com/flamboyantpenguin/wikilynx-web" style="display: block; text-align: right;">Source on
+            GitHub</a>
+        <div style="display: block; text-align: right; margin-top: 30px;">
+            <a href="https://dawn.org.in" style="color: #39ff14;">Powered by DAWN</a>
+        </div>
+    </div>
+</body>
+
+</html>
