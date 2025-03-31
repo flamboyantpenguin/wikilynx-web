@@ -125,25 +125,47 @@
         <div class="content0" style="background-color: #5C9B43;">
 
             <div class="left">
-                <img class="banner" src="https://cdn.dawn.org.in/base/circle/bards/penguin/Profile.png" alt="Logo"
-                    width="400px">
+                <div cdn-img="logo.svg" alt="Logo" width="400px"></div>
             </div>
 
             <div class="right">
 
                 <div class="title">
-                    <span>Dev | flamboyantpenguin</span>
+                    <span>Contributers de wikiLYNX</span>
                 </div>
 
                 <div class="long-desc">
-                    <span>Hello I am ペンギン (flamboyantpenguin), a second year engineering student.
-                        I’m a curious boi who loves to learn more about this world and life in it.
-                        I am interesting in working on C/C++, Python and is looking forward to projects on Linux!</span>
+                    <span>Thanks to all these wonderful people for contributing to wikiLYNX</span>
                     <br><br>
-                    <span>You can reach me at <a
-                            href="mailto:mail@flamboyantpenguin.in">mail@flamboyantpenguin.in</a></span>
-                </div>
+                    <div id="contributors"></div>
 
+                    <script>
+                        async function loadContributors() {
+                            const repoOwner = "flamboyantpenguin"; // Change this
+                            const repoName = "wikilynx"; // Change this
+                            const url = `https://api.github.com/repos/${repoOwner}/${repoName}/contributors`;
+            
+                            try {
+                                const response = await fetch(url);
+                                const contributors = await response.json();
+                                let html = "";
+            
+                                contributors.forEach(user => {
+                                    html += `<a href="${user.html_url}" target="_blank">
+                                      <img src="${user.avatar_url}" width="50" height="50" style="border-radius:50%; margin:5px;">
+                                   </a>`;
+                                });
+            
+                                document.getElementById("contributors").innerHTML = html;
+                            } catch (error) {
+                                console.error("Error fetching contributors:", error);
+                            }
+                        }
+            
+                        loadContributors();
+                    </script>
+            
+                </div>
             </div>
         </div>
     </div>
